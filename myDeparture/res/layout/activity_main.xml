@@ -1,0 +1,180 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.departure.NewCal" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="36dp"
+        android:text="Building: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="38dp"
+        android:text="Start Time: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="25sp" />
+
+    <Spinner
+        android:id="@+id/spinBuilding"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginRight="26dp"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/txtClass"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignLeft="@+id/spinBuilding"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/txtTime"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/spinBuilding"
+        android:layout_alignTop="@+id/textView3"
+        android:ems="10" />
+
+    <CheckBox
+        android:id="@+id/cbxMonday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtTime"
+        android:layout_alignTop="@+id/textView4"
+        android:text="Monday"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btnSetAlarm"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/btnAddClass"
+        android:layout_alignBottom="@+id/btnAddClass"
+        android:layout_toRightOf="@+id/btnAddClass"
+        android:text="Set Alarms"
+        android:textSize="25sp"
+        android:onClick="setAlarms" />
+
+    <CheckBox
+        android:id="@+id/cbxTuesday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbxMonday"
+        android:layout_below="@+id/cbxMonday"
+        android:text="Tuesday"
+        android:textSize="25sp" />
+
+    <CheckBox
+        android:id="@+id/cbxThursday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbxWednesday"
+        android:layout_below="@+id/cbxWednesday"
+        android:text="Thursday"
+        android:textSize="25sp" />
+
+    <CheckBox
+        android:id="@+id/cbxFriday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbxThursday"
+        android:layout_below="@+id/cbxThursday"
+        android:text="Friday"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/btnAddClass"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="21dp"
+        android:onClick="addClass"
+        android:text="Add Class"
+        android:textSize="25sp" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_above="@+id/btnSetAlarm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="29dp" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_below="@+id/txtTime"
+        android:layout_marginTop="30dp"
+        android:text="Days: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/list"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="86dp"
+        android:text="Class: "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="25sp" />
+
+    <CheckBox
+        android:id="@+id/cbxWednesday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/cbxTuesday"
+        android:layout_below="@+id/cbxTuesday"
+        android:text="Wednesday"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtClass"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_marginBottom="32dp"
+        android:text="Origin: "
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/origin"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView5"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignLeft="@+id/txtClass"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>

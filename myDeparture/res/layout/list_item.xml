@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+
+    android:padding="6dip">
+    <!-- Class label -->
+   <TextView
+		android:id="@+id/cLabel"
+
+		android:layout_width="wrap_content"
+		android:layout_height="26dip"
+
+		android:layout_alignParentTop="true"
+		android:layout_alignParentLeft="true"
+
+		android:textStyle="bold"
+		android:singleLine="true"
+		android:ellipsize="marquee"
+   />
+
+       <!-- Class Data -->
+
+   <TextView
+       android:id="@+id/cData"
+       android:layout_width="250dp"
+       android:layout_height="26dip"
+       android:layout_alignParentTop="true"
+       android:layout_toRightOf="@id/cLabel"
+       android:ellipsize="marquee"
+       android:singleLine="true" />
+
+   <!-- Building Label -->
+   <TextView
+	 	android:id="@+id/bLabel"
+
+	 	android:layout_width="wrap_content"
+	 	android:layout_height="26dip"
+
+		android:layout_alignParentLeft="true"
+		android:layout_below="@id/cLabel"
+
+	 	android:textStyle="bold"
+	 	android:gravity="center_vertical"
+   	/>
+
+   <!-- Building Data -->
+
+   <TextView
+       android:id="@+id/bData"
+       android:layout_width="250dp"
+       android:layout_height="26dip"
+       android:layout_below="@id/cData"
+       android:layout_toRightOf="@id/bLabel"
+       android:ellipsize="marquee"
+       android:gravity="center_vertical"
+       android:singleLine="true"
+       android:width="200dp" />
+
+   	<!-- Time Label -->
+   <TextView
+		android:id="@+id/tLabel"
+
+	 	android:layout_width="wrap_content"
+	 	android:layout_height="26dip"
+
+		android:layout_alignParentLeft="true"
+		android:layout_below="@id/bLabel"
+
+	 	android:textStyle="bold"
+	 	android:gravity="center_vertical"
+   />
+   <!-- Time Data -->
+
+      <TextView
+          android:id="@+id/tData"
+          android:layout_width="250dp"
+          android:layout_height="26dip"
+          android:layout_alignParentRight="true"
+          android:layout_below="@id/bData"
+          android:layout_toRightOf="@id/tLabel"
+          android:ellipsize="marquee"
+          android:gravity="center_vertical"
+          android:singleLine="true"
+          android:width="200dp" />
+
+   <!-- Days Label -->
+   <TextView
+		android:id="@+id/dLabel"
+
+	 	android:layout_width="wrap_content"
+	 	android:layout_height="26dip"
+
+		android:layout_alignParentLeft="true"
+		android:layout_below="@id/tLabel"
+
+	 	android:textStyle="bold"
+	 	android:gravity="center_vertical"
+   />
+   <!-- Days Data -->
+
+      <TextView
+          android:id="@+id/dData"
+          android:layout_width="250dp"
+          android:layout_height="26dip"
+          android:layout_alignParentRight="true"
+          android:layout_below="@id/tData"
+          android:layout_toRightOf="@id/dLabel"
+          android:gravity="center_vertical"
+          android:width="200dp" />
+
+</RelativeLayout>
